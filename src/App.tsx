@@ -1,9 +1,14 @@
 import { useState, type FormEvent } from "react";
 
-const textAreaDefaultValue = `{
-  name: "John Doe",
-  age: 18,
-  desc: "A fictional character..."
+const fetchDataDefaultValue = `{
+  "API_KEY": "X-2DI3ASXAB-31DVD"
+}
+`;
+
+const headerDataDefaultValue = `{
+  "name": "John Doe",
+  "age": 18,
+  "desc": "A fictional character..."
 }
 `;
 
@@ -25,9 +30,9 @@ const FeedbackColors = {
 export default function App() {
 
   const [api, setApi] = useState<string>("");
-  const [headers, setHeaders] = useState<string>("");
+  const [headers, setHeaders] = useState<string>(headerDataDefaultValue);
   const [method, setMethod] = useState<Method>("GET");
-  const [fetchData, setFetchData] = useState<string>(textAreaDefaultValue);
+  const [fetchData, setFetchData] = useState<string>(fetchDataDefaultValue);
   const [output, setOutput] = useState<string>("");
   const [feedback, setFeedback] = useState<FeedbackProps>({
     type: "default",
