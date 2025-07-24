@@ -1,11 +1,11 @@
 import { useState, type FormEvent } from "react";
 
-const fetchDataDefaultValue = `{
+const headerDataDefaultValue = `{
   "API_KEY": "X-2DI3ASXAB-31DVD"
 }
 `;
 
-const headerDataDefaultValue = `{
+const fetchDataDefaultValue = `{
   "name": "John Doe",
   "age": 18,
   "desc": "A fictional character..."
